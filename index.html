@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Astro Gadgets Where Quality is Overrated."
+    />
+    <link rel="stylesheet" href="astro.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>AstroGadget</title>
+  </head>
+  <body>
+    <header class="navbar" aria-label="Main Navigation">
+      <div class="logo" aria-label="Company name or logo">
+        Astro<span>Gadget</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#hero" aria-label="Go to home">Home</a></li>
+          <li><a href="#feature" aria-label="Go to ">Feature</a></li>
+          <li><a href="#pricing" aria-label="Go to pricing">Pricing</a></li>
+          <li><a href="#contact" aria-label="Go to Contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- hero -->
+      <section id="hero" aria-labelledby="home-content">
+        <div class="hero-content">
+          <h1 id="home-content">Meet, <span>AstroCam</span></h1>
+          <p>Fly Smarter. Capture Brilliance. Explore the Future.</p>
+          <a href="#feature" class="btn">More Info</a>
+        </div>
+        <div class="hero-img">
+          <img src="tt/300x200.svg" alt="AstroCam drone showing 3/4 view" />
+          <div class="badge">Best seller</div>
+        </div>
+      </section>
+
+      <!-- features -->
+      <section id="feature" aria-labelledby="feature-title">
+        <h2 id="feature-title">Why Choose AstroCam?</h2>
+        <div class="feature-container">
+          <div class="feature-card">
+            <img src="tt/300x200.svg" alt="feature display" />
+            <h3>4K Video Capture</h3>
+            <p>Record stunning ultra-high-definition videos effortlessly.</p>
+          </div>
+          <div class="feature-card">
+            <img src="tt/300x200.svg" alt="feature didplay" />
+            <h3>Long lasting Battery</h3>
+            <p>Up to 10 hrs of continuous flight without charging.</p>
+          </div>
+          <div class="feature-card">
+            <img src="tt/300x200.svg" alt="feature display" />
+            <h3>Smart Tracking</h3>
+            <p>Follow moving subjects automatically with AI tracking.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- pricing -->
+      <section id="pricing" aria-labelledby="pricing-title">
+        <h2 id="pricing-title">Choose Your plan</h2>
+        <div class="pricing-container">
+          <div class="pricing-card">
+            <h3>Basic</h3>
+            <p>$299</p>
+            <ul>
+              <li>Core Features</li>
+              <li>5h Battery</li>
+              <li>Standard Support</li>
+            </ul>
+            <a href="#" class="btn">Get Now</a>
+          </div>
+          <div class="pricing-card highlight">
+            <h3>Pro</h3>
+            <p>$399</p>
+            <ul>
+              <li>All Basic Features</li>
+              <li>10h Battery</li>
+              <li>Standard Support</li>
+            </ul>
+            <a href="#" class="btn">Get Now</a>
+          </div>
+          <div class="pricing-card">
+            <h3>Ultra</h3>
+            <p>$499</p>
+            <ul>
+              <li>All Pro Features</li>
+              <li>Advanced Sensors</li>
+              <li>Lifetime Support</li>
+            </ul>
+            <a href="#" class="btn">Get Now</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Contact Us</h2>
+        <div class="form-container">
+          <form
+            action="mailto: benedictsamuel163@gmail.com"
+            method="post"
+            enctype="application/x-www-form-urlencoded"
+          >
+            <label for="name">Name: </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter Your Name"
+              required
+              aria-label="Enter your name"
+            />
+            <label for="email">Email: </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Example@gmail.com"
+              required
+              aria-label="Enter your email"
+            />
+            <label for="message">Message Us: </label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="message us..."
+              required
+              rows="5"
+              aria-label="type your message"
+            ></textarea>
+            <div class="tooltip">We'll reply within 24hrs</div>
+            <button type="submit" aria-label="tap to submit">Submit</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 AstroGadget. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

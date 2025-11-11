@@ -1,0 +1,440 @@
+:root {
+  --bg-dark: #0b0f1f;
+  --bg-light: #141a2b;
+  --accent-primary: #00ffd1;
+  --accent-secondary: #ff6ec7;
+  --text-main: #e6eef9;
+  --text-muted: #8a95a5;
+  --card-bg: #1b2338;
+  --accent: #00e0ff;
+  --border-glow: #00ffd140;
+  --hover-glow: #38e0b8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* make sure anchored links don't get hidden behind sticky navbar */
+html {
+  scroll-padding-top: 82px;
+} /* adjust to your navbar height */
+
+/* and make sure main content has top padding so navbar doesn't overlap hero */
+main {
+  padding-top: 0.2rem;
+} /* optional — matches your design */
+
+body {
+  background: var(--bg-dark);
+  color: var(--text-main);
+  scroll-behavior: smooth;
+  line-height: 1.2;
+  font-family: Arial, Sans-Serif;
+  /* if footer is fixed, reserve space at the bottom */
+  padding-bottom: 80px; /* set roughly to footer height */
+}
+
+/* header */
+.navbar {
+  background: rgba(10, 12, 26, 0.85);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.3rem;
+  color: var(--text-main);
+  gap: 16px;
+  border-bottom: 2px solid var(--border-glow);
+}
+
+.logo {
+  font-family: "Orbitron", Sans-Serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--hover-glow);
+}
+
+.logo span {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--hover-glow);
+}
+
+/* feature */
+#hero {
+  background: linear-gradient(120deg, #0a0c1a 0%, #12182b 50%, #0a0c1a 100%);
+  color: var(--text-main);
+  padding: 8rem 3rem;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hero-content {
+  margin-bottom: 2.5rem;
+}
+
+.hero-content h1 {
+  font-family: "Montserrat", Sans-Serif;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  text-align: left;
+  font-size: 2rem;
+}
+
+.hero-content span {
+  color: var(--hover-glow);
+  font-family: "Orbitron", Sans-Serif;
+}
+
+.hero-content p {
+  color: var(--text-muted);
+  font-family:;
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-bottom: 1.2rem;
+}
+
+.btn {
+  background: var(--accent-primary);
+  text-decoration: none;
+  color: var(--bg-dark);
+  padding: 0.65rem 1rem;
+  border-radius: 15px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-bottom: 1.1rem;
+}
+
+.btn:hover {
+  background: var(--hover-glow);
+  color: var(--text-main);
+}
+
+.hero-img img {
+  border-radius: 15px;
+  box-shadow: 0 0 25px var(--accent-primary);
+  object-fit: cover;
+  transition: transform 0.35s ease;
+  transform-origin: center center;
+}
+
+.hero-img {
+  position: relative;
+}
+
+.hero-img .badge {
+  position: absolute;
+  top: 8px;
+  left: 20px;
+  color: var(--accent-secondary);
+  background: var(--accent-primary);
+  padding: 0.55rem 0.55rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.hero-img img:hover {
+  transform: scale(1.1);
+}
+
+/* features*/
+#feature {
+  padding: 8rem 3rem;
+  background: var(--bg-dark);
+}
+
+#feature h2 {
+  font-family: "Montserrat", Sans-Serif;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.feature-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.feature-card {
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 15px;
+  width: 300px;
+  transition: all 0.3s ease;
+}
+
+.feature-card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+  font-family: "Montserrat", Sans-Serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 0.85rem;
+  color: var(--hover-glow);
+}
+
+.feature-card p {
+  font-size: 1.2rem;
+  font-weight: 200;
+  color: var(--text-main);
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+}
+
+/* pricing */
+#pricing {
+  background: var(--bg-light);
+  padding: 6rem 3rem;
+}
+
+#pricing h2 {
+  font-family: "Montserrat", Sans-Serif;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+.pricing-container {
+  display: flex;
+  justify-items: space-between;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.pricing-card {
+  background: var(--card-bg);
+  padding: 2rem;
+  margin: 0 auto;
+  border-radius: 15px;
+  text-align: center;
+  width: 230px;
+  transition: all 0.3s ease;
+}
+
+.pricing-card h3 {
+  font-family: "Montserrat", Sans-Serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--hover-glow);
+  margin-bottom: 1rem;
+}
+
+.pricing-card p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.pricing-card ul {
+  list-style: none;
+  line-height: 1.3;
+  margin-bottom: 2rem;
+}
+
+.pricing-card li {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.55rem;
+}
+
+.highlight {
+  box-shadow: 0 0 20px var(--hover-glow);
+  transform: scale(1.05);
+  border: 2px solid var(--border-glow);
+  position: relative;
+  z-index: 2;
+}
+
+.highlight:hover {
+  border: 2px solid var(--accent-primary);
+}
+
+.pricing-card:hover {
+  transform: translateY(-8px);
+  background: var(--bg-dark);
+}
+
+/* contact */
+#contact {
+  background: var(--bg-dark);
+  padding: 5rem 2rem;
+}
+
+#contact h2 {
+  font-family: "Montserrat", Sans-Serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 0.35rem;
+}
+
+input,
+textarea {
+  padding: 0.75rem 1rem;
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  outline: none;
+  border: 2px solid var(--border-glow);
+  background: var(--bg-dark);
+  color: var(--text-main);
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid var(--accent);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-muted);
+  opacity: 0.8;
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  padding: 0.6rem 0.7rem;
+  font-size: 1.2rem;
+  color: var(--bg-dark);
+  background: var(--accent-primary);
+  width: 200px;
+  border-radius: 10px;
+  margin-top: 3rem;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: var(--hover-glow);
+  color: var(--text-main);
+}
+
+.tooltip {
+  position: absolute;
+  top: -25px;
+  right: 0;
+  font-size: 0.8rem;
+  background: var(--accent-primary);
+  color: var(--bg-dark);
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  max-width: 220px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 480px) {
+  .tooltip {
+    display: none;
+  } /* hide on tiny screens or reposition */
+}
+
+/* footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  background: var(--bg-light);
+  margin: 0 auto;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+  color: var(--text-muted);
+  height: 60px; /* optional: define footer height so padding matches */
+}
+
+@media (max-width: 768px) {
+  #hero {
+    padding: 4rem 1.5rem;
+  }
+  .hero-content h1 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  .hero-img {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .feature-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Accessibility: reduce motion if user prefers */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+
+  html {
+    scroll-behavior: auto; /* disable smooth scroll */
+  }
+}
